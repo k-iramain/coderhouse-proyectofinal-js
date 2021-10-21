@@ -2,6 +2,37 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("form").addEventListener('submit', simulador);
 });
 
+const veraz = {
+    36079981: {
+        "estado_bcra": 4,
+        "prestamo_vigente": true
+    },
+    31767890: {
+        "estado_bcra": 1,
+        "prestamo_vigente": false
+    },
+    33660132: {
+        "estado_bcra": 1,
+        "prestamo_vigente": false
+    },
+    33050132: {
+        "estado_bcra": 1,
+        "prestamo_vigente":true
+    },
+    30600032: {
+        "estado_bcra": 1,
+        "prestamo_vigente": false
+    },
+    31180102: {
+        "estado_bcra": 1,
+        "prestamo_vigente": false
+    },
+
+}
+
+let localStorage = window.localStorage;
+
+localStorage.setItem("veraz", JSON.stringify(veraz));
 
 class Usuario {
     constructor(nombre, apellido, DNI, sueldo) {
@@ -34,9 +65,30 @@ class Credito {
     }
 
     esAptoCredito() {
-        console.log(this.sueldoMinimo);
-        console.log(this.usuario.sueldo);
-        return this.sueldoMinimo <= this.usuario.sueldo;
+        let veraz = JSON.parse(localStorage.getItem("veraz"));
+        let informacionCrediticia = veraz[this.usuario.DNI]
+        console.log(informacionCrediticia);
+
+        if (this.sueldoMinimo >= this.usuario.sueldo ) {
+            console.log(1);
+            return false;
+        }
+        else if (informacionCrediticia == undefined) {
+            console.log(2);
+            return false;
+        }
+        else if (informacionCrediticia.prestamo_vigente == true) {
+            console.log(3);
+            return false;
+        }
+        else if (informacionCrediticia.estado_bcra > 2) {
+            console.log(4);
+            return false;
+        }
+        else {
+            return true;
+        };
+       
 
     }
 
@@ -48,7 +100,7 @@ class Credito {
         let header = document.createElement("h1");
         header.innerHTML = "Detalle prestamo";
         let detalle = document.createElement("p");
-        detalle.innerHTML = "Hola " + this.usuario.nombre+ "" + this.usuario.apellido + " DNI: " + this.usuario.DNI + " podemos otorgarte hasta: $" + importeFinal;
+        detalle.innerHTML = "Hola " + this.usuario.nombre + "" + this.usuario.apellido + " DNI: " + this.usuario.DNI + " podemos otorgarte hasta: $" + importeFinal;
         let cuotas = document.createElement("ul");
         let cuotaDetalle1 = document.createElement("li");
         cuotaDetalle1.innerHTML = "si lo sacas en " + this.cuota3.cuota + " cuotas pagas: " + this.cuota3.calcularCuota(importeFinal);
