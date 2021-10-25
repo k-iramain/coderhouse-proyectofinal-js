@@ -127,7 +127,10 @@ class Credito {
             this.mensajeFinal(montoMaximoAPrestar);
 
         } else {
-            alert("Lo sentimos no es apto para otorgarle el credito");
+          let error = document.createElement("h1");
+          error.innerHTML = "lo sentimos, no podemos otorgarle el crédito";
+          let detallePrestamo = document.getElementById("prestamo");
+          detallePrestamo.appendChild(error);
         }
     }
 
