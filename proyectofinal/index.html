@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="keywords" content="Bootstrap, Landing page, Template, Business, Service">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="author" content="Grayrids">
+  <title>Platano</title>
+  <!--====== Favicon Icon ======-->
+  <link rel="shortcut icon" href="#" type="image/png">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/LineIcons.css">
+  <link rel="stylesheet" href="css/magnific-popup.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+</head>
+
+<body>
+
+  <!-- Header Section Start -->
+  <header id="home" class="hero-area">
+    <div class="overlay">
+      <span></span>
+      <span></span>
+    </div>
+    <nav class="navbar navbar-expand-md bg-inverse fixed-top scrolling-navbar">
+      <div class="container">
+        <a href="index.html" class="navbar-brand"><img src="" alt=""> PLATANO</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="lni-menu"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav mr-auto w-100 justify-content-end">
+            <li class="nav-item">
+              <a class="nav-link page-scroll" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link page-scroll" href="#features">Simula tu prestamo</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link page-scroll" href="#contact">Contactanos</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="row space-100">
+        <div class="col-lg-6 col-md-12 col-xs-12">
+          <div class="contents">
+            <h2 class="head-title">¿Necesitas dinero? Esto es para vos..</h2>
+            <p>En Platano nos importa tu bolsillo por eso te proporcionamos prestamos con bajas tazas de interes, para
+              que puedas pagarlos comodamente.Nos adaptamos a tus necedides,
+              prestamos desde $ 3000 hasta 1.500.000
+              ¡Contactanos!
+              Solicita tu prestamo de forma rápida, cómoda y segura.
+            </p>
+
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-12 col-xs-12 p-0">
+          <div class="intro-img">
+            <img src="img/inclusio-n-financiera.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- Header Section End -->
+
+  <!-- Cool Fetatures Section Start -->
+  <section id="features" class="section">
+    <div class="container">
+      <!-- Start Row -->
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="features-text section-header text-center">
+            <div>
+              <h2 class="section-title">Simula tu prestamo</h2>
+              <div class="desc-text">
+                <p>Calculá tu pestamo de forma rápida y segura </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="container">
+        <div class="row mt-3">
+          <div class="col-12 col-sm-12 col-lg-6">
+            <h2 class="h2"><i class="bi bi-calculator"></i> Ingresa tu monto</h2>
+            <div class="form-group mt-2 mb-3">
+              <label for="monto">Monto</label>
+              <input type="text" class="form-control" id="monto" placeholder="Ingresar monto">
+            </div>
+            <div class="form-group mt-2 mb-3">
+              <label for="tiempo">Tiempo en Meses</label>
+              <input type="number" class="form-control" id="tiempo" placeholder="Ingresar cantidad de meses" min="1"
+                value="1">
+            </div>
+            <div class="form-group mt-2 mb-3">
+              <label for="interes">Interés Mensual %</label>
+              <input type="text" class="form-control" id="interes" placeholder="Ingresar tasa de interés mensual">
+            </div>
+            <div class="form-group mt-2 mb-3 alert alert-danger" hidden id="alert-error">
+              Debes llenar todos los campos!
+            </div>
+            <button type="button" class="btn btn-primary" id="btnCalcular">Calcular</button>
+          </div>
+          <div class="col-12 col-sm-12 col-lg-6">
+            <table id="lista-tabla" class="table">
+              <thead>
+                <tr>
+                  <th>Fecha</th>
+                  <th>Amortización</th>
+                  <th>Interés</th>
+                  <th>Cuota</th>
+                  <th>Saldo</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Cool Fetatures Section End -->
+
+  <!-- Contact Us Section -->
+  <section id="contact" class="section">
+    <!-- Container Starts -->
+    <div class="container">
+      <!-- Start Row -->
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="contact-text section-header text-center">
+            <div>
+              <h2 class="section-title">Contactanos</h2>
+              <div class="desc-text">
+                <p>Envianos tus inquietudes y te responderemos a la brevedad</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- End Row -->
+      <!-- Start Row -->
+      <div class="row">
+        <!-- Start Col -->
+        <div class="col-lg-6 col-md-12">
+          <form id="contactForm">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="name" name="name" placeholder="Name" required
+                    data-error="Please enter your name">
+                  <div class="help-block with-errors"></div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <input type="text" placeholder="Subject" id="msg_subject" class="form-control" name="msg_subject"
+                    required data-error="Please enter your subject">
+                  <div class="help-block with-errors"></div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="email" name="email" placeholder="Email" required
+                    data-error="Please enter your Email">
+                  <div class="help-block with-errors"></div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <input type="text" placeholder="Budget" id="budget" class="form-control" name="budget" required
+                    data-error="Please enter your Budget">
+                  <div class="help-block with-errors"></div>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="form-group">
+                  <textarea class="form-control" id="message" name="message" placeholder="Write Message" rows="4"
+                    data-error="Write your message" required></textarea>
+                  <div class="help-block with-errors"></div>
+                </div>
+                <div class="submit-button">
+                  <button class="btn btn-common" id="submit" type="submit">Submit</button>
+                  <div id="msgSubmit" class="h3 hidden"></div>
+                  <div class="clearfix"></div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <!-- End Col -->
+        <!-- Start Col -->
+        <div class="col-lg-1">
+
+        </div>
+        <!-- End Col -->
+        <!-- Start Col -->
+        <div class="col-lg-4 col-md-12">
+          <div class="contact-img">
+            <img src="img/contact/01.png" class="img-fluid" alt="">
+          </div>
+        </div>
+        <!-- End Col -->
+        <!-- Start Col -->
+        <div class="col-lg-1">
+        </div>
+        <!-- End Col -->
+
+      </div>
+      <!-- End Row -->
+    </div>
+  </section>
+  <!-- Contact Us Section End -->
+
+  <!-- Footer Section Start -->
+  <footer>
+    <!-- Footer Area Start -->
+    <section id="footer-Content">
+      <div class="container">
+        <!-- Start Row -->
+        <div class="row">
+
+          <!-- Start Col -->
+          <div class="col-12">
+
+            <div class="footer-logo">
+              <h2>PLATANO FINTECH</h2>
+            </div>
+          </div>
+          <!-- End Col -->
+        </div>
+
+      </div>
+      <!-- Copyright Start  -->
+      <div class="copyright">
+        <div class="container">
+          <!-- Star Row -->
+          <div class="row">
+            <div class="col-md-12">
+              <div class="site-info text-center">
+                <p>Copyright 2021, <a href="https://github.com/k-iramain/coderhouse-proyectofinal-js"
+                    rel="nofollow">Platano</a></p>
+              </div>
+            </div>
+          </div>
+          <!-- End Col -->
+        </div>
+        <!-- End Row -->
+      </div>
+      </div>
+      <!-- Copyright End -->
+    </section>
+    <!-- Footer area End -->
+
+  </footer>
+  <!-- Footer Section End -->
+
+
+  <!-- Go To Top Link -->
+  <a href="#" class="back-to-top">
+    <i class="lni-chevron-up"></i>
+  </a>
+
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="loader" id="loader-1"></div>
+  </div>
+  <!-- End Preloader -->
+
+  <!-- jQuery first, then Tether, then Bootstrap JS. -->
+  <script src="js/jquery-min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.nav.js"></script>
+  <script src="js/scrolling-nav.js"></script>
+  <script src="js/jquery.easing.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/dayjs.min.js"></script>
+  <script src="js/aleman.js"></script>
+
+
+</body>
+
+</html>
